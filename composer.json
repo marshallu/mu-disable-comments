@@ -10,7 +10,7 @@
 			"email": "cmccomas@marshall.edu"
 		}
 	],
-	"type": "wordpress-plugin",
+	"type": "wordpress-muplugin",
 	"require": {
 		"php": ">=8.3"
 	},
