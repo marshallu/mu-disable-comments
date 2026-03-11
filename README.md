@@ -3,7 +3,7 @@
 A lean, internal plugin that disables all comments sitewide for Marshall University's WordPress network.
 
 - **Package:** `marshallu/mu-disable-comments`
-- **Type:** WordPress MU (must-use) plugin
+- **Type:** WordPress plugin
 
 ---
 
@@ -26,22 +26,30 @@ A lean, internal plugin that disables all comments sitewide for Marshall Univers
 
 ## Installation
 
-Upload the plugin directory to `wp-content/mu-plugins/` via your mu-plugins loader. No activation step is required — mu-plugins load automatically.
+### Manual
+
+Upload the plugin directory to `wp-content/plugins/` and activate it from the WordPress admin.
 
 ```
 wp-content/
-└── mu-plugins/
+└── plugins/
     └── mu-disable-comments/
         ├── disable-comments.php
         └── includes/
             └── ...
 ```
 
-If your network uses a single-file mu-plugins loader, require the main plugin file from it:
+On a **single site**, activate from **Plugins** in the WordPress admin.
 
-```php
-require_once __DIR__ . '/mu-disable-comments/disable-comments.php';
+On a **multisite network**, activate from **Network Admin > Plugins** to enable it across all sites at once, or activate it per-site as needed.
+
+### Composer
+
+```bash
+composer require marshallu/mu-disable-comments
 ```
+
+Composer will install the plugin to `wp-content/plugins/mu-disable-comments/`.
 
 ---
 

@@ -3,7 +3,7 @@
 A lean, internal plugin that disables all comments sitewide for Marshall University's WordPress network.
 
 - **Package**: `marshallu/mu-disable-comments`
-- **Type**: WordPress MU (must-use) plugin
+- **Type**: WordPress plugin
 - **Author**: Christopher McComas
 
 ## Development Commands
