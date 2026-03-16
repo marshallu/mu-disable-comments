@@ -26,6 +26,7 @@ class MU_Disable_Comments_Admin {
 		add_action( 'admin_menu', array( $this, 'remove_menu_pages' ) );
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
 		add_action( 'wp_before_admin_bar_render', array( $this, 'remove_admin_bar_items' ) );
+		add_action( 'admin_head-index.php', array( $this, 'hide_glance_comment_count' ) );
 		add_filter( 'manage_posts_columns', array( $this, 'remove_comments_column' ) );
 		add_filter( 'manage_pages_columns', array( $this, 'remove_comments_column' ) );
 	}
@@ -97,6 +98,13 @@ class MU_Disable_Comments_Admin {
 	public function remove_admin_bar_items() {
 		global $wp_admin_bar;
 		$wp_admin_bar->remove_menu( 'comments' );
+	}
+
+	/**
+	 * Hide the comment count item in the At a Glance dashboard widget.
+	 */
+	public function hide_glance_comment_count() {
+		echo '<style>#dashboard_right_now .comment-count, #dashboard_right_now .comment-mod-count { display: none; }</style>';
 	}
 
 	/**

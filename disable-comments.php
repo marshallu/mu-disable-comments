@@ -9,7 +9,7 @@
  * Plugin Name:  MU Disable Comments
  * Plugin URI:   https://www.marshall.edu
  * Description:  Disables all comments, pings, and trackbacks sitewide.
- * Version:      1.0.2
+ * Version:      1.0.3
  * Author:       Christopher McComas
  */
 
