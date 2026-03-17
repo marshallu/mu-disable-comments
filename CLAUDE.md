@@ -6,6 +6,12 @@ A lean, internal plugin that disables all comments sitewide for Marshall Univers
 - **Type**: WordPress plugin
 - **Author**: Christopher McComas
 
+## Versioning
+
+When bumping the version:
+1. Update the `Version:` header in `disable-comments.php`
+2. Create and push a matching git tag so Packagist picks it up: `git tag vX.X.X && git push origin vX.X.X`
+
 ## Development Commands
 
 ```bash
